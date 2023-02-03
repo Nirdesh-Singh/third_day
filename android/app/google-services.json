@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "715382284353",
+    "project_id": "flutter-forward-festival",
+    "storage_bucket": "flutter-forward-festival.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715382284353:android:51139d07b5c4954cace6c0",
+        "android_client_info": {
+          "package_name": "com.example.third_day"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715382284353-3si5056bq3c6q30rrqit63vb06hnucb0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.third_day",
+            "certificate_hash": "454261f1296fbaf05a6f54b887d059c446b79f29"
+          }
+        },
+        {
+          "client_id": "715382284353-2rdbtiudm8dv8r2pr2hubhp2puon2ccm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGfkVZm-U5WvbILmFTssPsoAmQm3oIr6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715382284353-2rdbtiudm8dv8r2pr2hubhp2puon2ccm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
