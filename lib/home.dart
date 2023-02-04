@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:third_day/profile.dart';
 import 'package:third_day/profile_anon.dart';
 import 'package:third_day/services/firebase_services.dart';
 
@@ -29,14 +26,6 @@ class _HomeState extends State<Home> {
           children: [
             ElevatedButton(
               onPressed: () async {
-                await AuthService().signInAnonymously();
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const Anon()));
-              },
-              child: const Text('Sign In Anonymously'),
-            ),
-            ElevatedButton(
-              onPressed: () async {
                 dynamic result = await AuthService()
                     .signInWithEmailAndPassword(email, password);
                 if (result != null) {
@@ -61,17 +50,6 @@ class _HomeState extends State<Home> {
               },
               child: const Text('Register With Email and Password'),
             ),
-            GestureDetector(
-              onTap: () async {
-                await AuthService().signInWithGoogle();
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const Profile()));
-              },
-              child: const CircleAvatar(
-                backgroundImage: AssetImage('assets/googleLogo.jpg'),
-                radius: 50.0,
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: Form(
@@ -87,12 +65,12 @@ class _HomeState extends State<Home> {
                         fillColor: Colors.grey,
                         border: OutlineInputBorder()),
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 10.0),
                   TextFormField(
+                    obscureText: true,
                     onChanged: (val) => setState(() {
                       password = val;
                     }),
-                    obscureText: true,
                     decoration: const InputDecoration(
                         icon: Icon(Icons.password),
                         hintText: 'password1234',
